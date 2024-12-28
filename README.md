@@ -1,10 +1,36 @@
-# Getting Started with Create React App
+# Secure Messaging
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A secure, real-time messaging application built using React for the frontend, with Firebase providing authentication, data storage via Firestore, and backend logic through Cloud Functions.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Authentication**: Secure login and registration using Firebase Authentication with Google IdP
+- **Real-time Messaging**: Messages are stored and retrieved in real-time using Firestore.
+- **Encrypted Messages**: Messages are encrypted client-side before being sent to Firestore.
+- **Scalable Backend**: Utilizes Firebase Cloud Functions for server-side logic.
+
+## Prerequisites
+
+- Node.js (v23 or above)
+- npm
+- Firebase CLI (for deployment)
+
+## Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone git@github.com:juk80x/secure-messaging.git
+cd secure-messaging-app
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+cd functions/
+npm install
+```
+
+### 3. 
 
 ### `npm start`
 
