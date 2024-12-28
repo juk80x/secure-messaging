@@ -1,0 +1,22 @@
+# Node.js
+node_modules/
+package-lock.json
+functions/node_modules/
+functions/package-lock.json
+
+
+# Firebase
+firebase-debug.log
+.firebase/
+#firebase.json  # If you're managing this in source control, comment this out
+.firebaserc  # Same here
+
+# Build artifacts
+/build/
+
+# Logs
+*.log
+
+# IDE and OS specific files
+.idea/
+

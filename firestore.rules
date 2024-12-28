@@ -1,0 +1,28 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Function to check if the user owns the document
+    function isRecipient() {
+      return request.auth.uid == resource.data.recipient_id;
+    }
+
+    match /users/{userId} {
+        allow create: if isAuthenticated() && request.auth.uid == userId;
+        allow read: if isAuthenticated() && request.auth.uid == userId
+        allow update: if false;
+        allow delete: if false;
+    }
+
+    match /messages/{message} {
+        allow read: if isAuthenticated() && isRecipient();
+        allow create, update, delete: if false;
+    }
+  }
+}
