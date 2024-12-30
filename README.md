@@ -113,7 +113,8 @@ user's registered email address.
 ![Message List](https://raw.githubusercontent.com/juk80x/secure-messaging/master/docs/images/message_list.png)
 <br>
 Once the user has registered a passkey, the users will be able to list messages sent 
-by other secure messaging service users.
+by other secure messaging service users. A green checkmark signifies that the server has verified the sender's 
+signature of the message. 
 
 ## Security Features
 ### Authentication
