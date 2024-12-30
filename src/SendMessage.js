@@ -67,7 +67,7 @@ function SendMessage() {
   return (
     <form className="message-form" onSubmit={handleSubmit}>
       <div className="form-group">
-        <label for="recipient-email">Recipient:</label>
+        <label htmlFor="address">Recipient:</label>
         <input
           type="email"
           name="address"
@@ -79,7 +79,7 @@ function SendMessage() {
         />
       </div>
       <div className="form-group">
-        <label for="message">Message:</label>
+        <label htmlFor="message">Message:</label>
         <textarea
           name="message"
           value={messageData.message}

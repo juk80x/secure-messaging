@@ -21,8 +21,8 @@ const logger = require("firebase-functions/logger");
 const CryptoJS = require("crypto-js");
 
 const rpName = "Secure Messaging";
-const rpID = process.env.FIREBASE_AUTH_DOMAIN;
-const origin = `https://${process.env.FIREBASE_AUTH_DOMAIN}`;
+const rpID = process.env.REACT_APP_FIREBASE_RP_ID;
+const origin = `https://${rpID}`;
 
 admin.initializeApp();
 const db = admin.firestore();
@@ -222,6 +222,7 @@ exports.verifyAuthentication = onCall(async (request) => {
 });
 
 exports.sendMessage = onCall(async (request) => {
+  logger.debug("Environment variables", process.env);
   if (!request.auth) {
     throw new HttpsError(
       "unauthenticated",
