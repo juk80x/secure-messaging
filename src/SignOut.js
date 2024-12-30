@@ -13,7 +13,7 @@ function SignOut() {
     }
   };
 
-  return <button onClick={handleLogout}>Logout</button>;
+  return <button className="logout-btn " onClick={handleLogout}>Logout</button>;
 }
 
 export default SignOut;

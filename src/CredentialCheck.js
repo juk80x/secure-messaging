@@ -13,7 +13,7 @@ function CredentialCheck() {
       if (currentUser) {
         const userRef = doc(db, "users", currentUser.uid);
         const userSnap = await getDoc(userRef);
-        if (userSnap.data().credential_id) {
+        if (userSnap.exists() && userSnap.data().credential_id) {
           setIsPasskeyRegistered(true);
         }
       }

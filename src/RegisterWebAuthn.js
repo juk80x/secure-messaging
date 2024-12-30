@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { startRegistration } from "@simplewebauthn/browser";
 import { httpsCallable } from "firebase/functions";
 import { auth, functions } from "./firebaseConfig";
+import SendMessage from "./SendMessage";
 
 function RegisterWebAuthn() {
   const [error, setError] = useState(null);
@@ -66,7 +67,7 @@ function RegisterWebAuthn() {
 
   return (
     <div>
-      {!success && <button ref={buttonRef}>Register Passkey</button>}
+      {success ? <SendMessage/> : <button className="btn-submit" ref={buttonRef}>Register Passkey</button>}
       {error && <p>Error: {error}</p>}
     </div>
   );

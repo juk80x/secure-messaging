@@ -96,16 +96,20 @@ firebase deploy
 
 ### Operations
 #### Authentication
+![Sign In](https://raw.githubusercontent.com/juk80x/secure-messaging/master/docs/images/sign_in.png)
 The user will have the option to log in using Google credentials.
 ### Registration
+![Registration](https://raw.githubusercontent.com/juk80x/secure-messaging/master/docs/images/registration.png)
 Once logged in the user will have the option of registering a passkey using WebAuthn.
 ### Send Messages
+![Send Message](https://raw.githubusercontent.com/juk80x/secure-messaging/master/docs/images/send_message.png)
 Once the user has registered a passkey, the user will be able to send signed messages
 to other users that have already registered with secure messaging service using the
 user's registered email address.
 ### Receive Messages
-Once the user has registered a passkey, the users will be able to receive messages
-from other secure messaging service users.
+![Message List](https://raw.githubusercontent.com/juk80x/secure-messaging/master/docs/images/message_list.png)
+Once the user has registered a passkey, the users will be able to list messages sent 
+by other secure messaging service users.
 
 ## Security Features
 ### Authentication

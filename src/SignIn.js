@@ -13,7 +13,7 @@ const SignIn = () => {
     }
   };
 
-  return <button onClick={handleGoogleSignIn}>Sign In with Google</button>;
+  return <button className="btn-submit" onClick={handleGoogleSignIn}>Sign In with Google</button>;
 };
 
 export default SignIn;

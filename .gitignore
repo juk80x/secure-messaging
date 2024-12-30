@@ -19,6 +19,7 @@ firebase-debug.log
 
 # IDE and OS specific files
 .idea/
+.DS_Store
 
 # Environment
 .env
