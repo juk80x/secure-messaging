@@ -28,7 +28,7 @@ const UserStore = () => {
   }, []);
 
   return (
-    <div>{userExists ? null : <p>User is being added to Firestore...</p>}</div>
+    <div>{!userExists && <p>User is being added to Firestore...</p>}</div>
   );
 };
 

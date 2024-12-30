@@ -3,6 +3,7 @@ import RegisterWebAuthn from "./RegisterWebAuthn";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth, db } from "./firebaseConfig";
 import { doc, getDoc } from "firebase/firestore";
+import SendMessage from "./SendMessage";
 
 function CredentialCheck() {
   const [isPasskeyRegistered, setIsPasskeyRegistered] = useState(false);
@@ -21,7 +22,7 @@ function CredentialCheck() {
     return () => unsubscribe();
   }, []);
 
-  return <div>{!isPasskeyRegistered && <RegisterWebAuthn />}</div>;
+  return <div>{isPasskeyRegistered ? <SendMessage/> : <RegisterWebAuthn />}</div>;
 }
 
 export default CredentialCheck;

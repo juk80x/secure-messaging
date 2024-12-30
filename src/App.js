@@ -4,7 +4,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebaseConfig";
 import SignIn from "./SignIn";
 import UserStore from "./UserStore";
-import SendMessage from "./SendMessage";
 import CredentialCheck from "./CredentialCheck";
 import MessageList from "./MessageList";
 import SignOut from "./SignOut";
@@ -20,7 +19,6 @@ const App = () => {
           <SignOut />
           <UserStore />
           <CredentialCheck />
-          <SendMessage />
           <MessageList />
         </div>
       ) : (
